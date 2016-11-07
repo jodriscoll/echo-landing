@@ -8,12 +8,25 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript">
-    $(document).ready(function(){
-      $('#header .rwd-menu').prepend('<a href="#" class="echo--header-git">Get in Touch</a>');
+    $(document).ready(function() {
+      // inject the "Get in Touch" button within the <header>
+      $('#header .rwd-menu').prepend('<a href="#get-in-touch" class="echo--header-git" id="js-git-click">Get in Touch</a>');
+      
+      // initiate the tabs with the #echo--tabs element
       // $('#echo--tabs').tabs();
-      $('#echo--tabs a').click(function(e){
+      
+      // establish the click to show for the tabs
+      $('#echo--tabs a').click(function(e) {
         e.preventDefault();
         $(this).tab('show');
+      });
+
+      // scrolling functionality for the "Get in Touch" button
+      $('#js-git-click').click(function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $('#get-in-touch').offset().top - 0
+        }, 1000);
       });
     });
   </script>
@@ -188,7 +201,7 @@
     </div>
     
     <!-- desc: white background, orange heading, hr, client supplied form -->
-    <div class="container-fluid echo--content-block white-bg">
+    <div id="get-in-touch" class="container-fluid echo--content-block white-bg">
       <div class="row">
         <div class="col-xs-12 col-md-12">
           <div class="container">
@@ -213,7 +226,7 @@
                     <label for="title">Job Title</label>
                     <input id="title" maxlength="40" name="title" required="" size="20" type="text" />
                     <input id="Campaign_ID" name="Campaign_ID" type="hidden" value=" 7011a000000bKfV" /> 
-                    <input id="lead_gen_submit" name="submit" type="submit" value="Get In Touch" />
+                    <input id="lead_gen_submit" name="submit" type="submit" value="Get in Touch" />
                   </form>
                 </section>
               </div>
