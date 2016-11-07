@@ -1,6 +1,8 @@
 # echo-landing
 F212 Echo Landing Page – WordPress Template
-url: http://goo.gl/qLgXCB
+
+URL: http://goo.gl/qLgXCB
+
 
 ### environment:
 ```bash
@@ -10,6 +12,7 @@ $ git clone git@github.com:jodriscoll/echo-landing.git
 $ cd {development_location}/echo-landing
 $ git status
 ```
+
 
 ### sass:
 ```bash
