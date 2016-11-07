@@ -40,3 +40,7 @@ Thumbs.db
 # Webstorm idea files #
 #######################
 *.idea/
+
+# SASS Cache #
+##############
+.sass-cache/
