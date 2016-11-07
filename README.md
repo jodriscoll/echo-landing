@@ -2,7 +2,7 @@
 F212 Echo Landing Page – WordPress Template
 url: http://goo.gl/qLgXCB
 
-### environment configuration:
+### environment:
 ```bash
 # make sure you have Xcode installed (https://developer.apple.com/download)
 $ cd {development_location}
