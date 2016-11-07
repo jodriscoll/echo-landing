@@ -24,8 +24,9 @@
       // scrolling functionality for the "Get in Touch" button
       $('#js-git-click').click(function(e) {
         e.preventDefault();
+        // offset the top by 50px
         $('html, body').animate({
-            scrollTop: $('#get-in-touch').offset().top - 0
+            scrollTop: $('#get-in-touch').offset().top - 5
         }, 1000);
       });
     });
