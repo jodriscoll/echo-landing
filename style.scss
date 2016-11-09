@@ -229,6 +229,9 @@ body.page-template-echo-template {
         margin: 0 auto;
         margin-top: 40px;
         width: auto;
+        p {
+          margin: 0;
+        }
       }
       .echo--landing-page-form {
         margin: 0 auto;
