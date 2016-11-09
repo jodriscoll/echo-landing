@@ -9,7 +9,7 @@ URL: http://goo.gl/qLgXCB
 # make sure you have Xcode installed (https://developer.apple.com/download)
 $ cd {development_location}
 $ git clone git@github.com:jodriscoll/echo-landing.git
-$ cd {development_location}/echo-landing
+$ cd {development_location}/echo-landing/
 $ git status
 ```
 
@@ -17,5 +17,6 @@ $ git status
 ### sass:
 ```bash
 # make sure you have Sass installed (http://sass-lang.com/install)
+$ cd {development_location}/echo-landing/sass/
 $ sass --watch --sourcemap=none  style.scss:style.min.css --style compressed
 ```
