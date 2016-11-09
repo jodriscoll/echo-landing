@@ -20,38 +20,40 @@ body.page-template-echo-template {
     box-shadow: 0 0 14px -6px black;
     height: auto; 
   }
-  .echo--header-git {
+  .echo--header-git {                                                           // a.echo--header-git#js-git-click
     background-color: white;
     border: 3px solid #F26B21;
     color: #F26B21;
-    padding: 10px 0;
+    padding: 5px 0 4px;
     position: absolute;
     text-align: center;
-    
+    top: 25%;
     &:hover, &:focus { text-decoration: none; }
     // ≤ mobile end
     @media (max-width: $width_mobile_end) {
       font-size: 9pt;
+      line-height: 9pt;
       right: 60px;
-      top: 8px;
       width: 100px;
     }
     // = tablet start
     @media (min-width: $width_tablet_start) {
       font-size: 12pt;
+      line-height: 12pt;
       right: 120px;
-      top: 6px;
       width: 120px;
     }
-    
   }
-  .echo--landing-page_main-wrapper { margin-bottom: 40px; }
+  // .echo--landing-page_main-wrapper { margin-bottom: 40px; }
   .echo--lp-modal {                                                             // div.container-fluid.echo--lp-modal
-    background: url('//www.fahrenheit-212.com/wp-content/themes/212F/echo--landing-page/images/hero--modal-bg.jpg') no-repeat top center #292829;
+    background-color: #333133;
     height: 506px;
     padding-bottom: 126px;
     padding-top: 108px;
     position: relative;
+    &.default {
+      background: url('/wp-content/uploads/2016/11/hero_background-pattern.png') no-repeat top center transparent;
+    }
     // ≥ desktop start
     @media (min-width: $width_desktop_start) {
       background-repeat: repeat-x;
@@ -128,6 +130,7 @@ body.page-template-echo-template {
         color: rgba(0, 0, 0, .7);
         font-family: Helvetica, Arial, sans-serif;
         font-weight: 300;
+        margin-bottom: 25px;
         // ≤ mobile end
         @media (max-width: $width_mobile_end) {
           font-size: 14pt;
@@ -156,48 +159,25 @@ body.page-template-echo-template {
           line-height: 19pt;
         }
       }
-      img {
-        display: inline-block;
-        float: left;
-        + img {
-          border-right: none;
-          padding-right: 0;
-        }
-        // ≤ mobile end
-        @media (max-width: $width_mobile_end) {
-          padding-bottom: 16px;
-        }
-        // ≥ tablet start
-        @media (min-width: $width_tablet_start) {
-          border-right: 1px solid black;
-          padding-right: 16px;
-          // height: 100px;
-          // max-height: 100px;
-          + img {
-            margin-left: 16px;
-          }
-        }
-      }
+      img { }
     }
   }
   .echo--content-block {                                                        // div.container-fluid.echo--content-block
+    padding-bottom: 80px;
     padding-top: 80px;
     // ≤ mobile end
     @media (max-width: $width_mobile_end) { }
     // ≥ tablet start
     @media (min-width: $width_tablet_start) { }
     // ≥ desktop start
-    @media (min-width: $width_desktop_start) {
-      // height: 384px;
-      // max-height: 384px;
-    }
+    @media (min-width: $width_desktop_start) { }
     .echo--content-section {
       // section
       text-align: center;
       h1 {
         color: #F26B21;
         font-family: Helvetica, Arial, sans-serif;
-        font-weight: 500;
+        font-weight: bold;
         margin-bottom: 45px;
         margin-top: 0;
         padding-top: 0;
@@ -225,7 +205,7 @@ body.page-template-echo-template {
       p { 
         color: rgba(0, 0, 0, .7);
         font-family: Georgia, Times, "Times New Roman", serif;
-        margin-bottom: 80px;
+        margin-bottom: 0;
         margin-top: 58px;
         padding-top: 0;
         padding-bottom: 0;
@@ -305,8 +285,8 @@ body.page-template-echo-template {
           border: 3px solid #F36E24;
           color: #F36E24;
           font-family: Helvetica, Arial, sans-serif;
-          font-size: 20pt;
-          font-weight: 500;
+          font-size: 15pt;
+          font-weight: bold;
           height: 48px;
           margin-top: 26px;
           text-align: center;
@@ -424,10 +404,9 @@ body.page-template-echo-template {
     }
   }
   .echo--tech-background {                                                      // div.container-fluid.echo--tech-background
-    background: url('//image.prntscr.com/image/a0200af2a8ba4762825e4b728e7d3463.png') no-repeat top center #F6F6F6;
+    background-color: #F6F6F6;
     // ≤ mobile end
     @media (max-width: $width_mobile_end) {
-      background-size: cover;
       height: 164px;
     }
     // ≥ tablet start
@@ -435,8 +414,18 @@ body.page-template-echo-template {
       height: 328px;
       max-height: 328px;
     }
-    .echo--techpattern {                                                        // div.col-xs-12.echo--techpattern
+    .echo--tech-background-image {                                              // div.col-xs-12.echo--tech-background-image
       background-color: transparent;
+      background-position: top center;
+      background-repeat: no-repeat;
+      height: 100%;
+      &.default {
+        background: url('/wp-content/uploads/2016/11/hero_background-pattern.png') no-repeat top center transparent;
+      }
+      // ≤ mobile end
+      @media (max-width: $width_mobile_end) {
+        background-size: cover;
+      }
     }
   }
   .main {                                                                       // generated by: <?php get_footer(); ?>
