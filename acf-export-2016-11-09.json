@@ -1,0 +1,658 @@
+[
+    {
+        "key": "group_58226bc4032de",
+        "title": "Echo :: Header Modifications",
+        "fields": [
+            {
+                "key": "field_58226dc09a9f4",
+                "label": "Header :: Custom Scripts",
+                "name": "echo_lp_scripts",
+                "type": "textarea",
+                "instructions": "Please provide any scripts that should be loaded for this template. The \"Get in Touch\" header button can be modified in this section.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "<script src=\"\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.12.0\/jquery.min.js\"><\/script>\r\n<script src=\"\/\/maxcdn.bootstrapcdn.com\/bootstrap\/3.3.7\/js\/bootstrap.min.js\"><\/script>\r\n<script type=\"text\/javascript\">\r\n  $(document).ready(function() {\r\n    \/\/ inject the \"Get in Touch\" button within the <header>\r\n    $('#header .rwd-menu').prepend('<a href=\"#get-in-touch\" class=\"echo--header-git\" id=\"js-git-click\">Get in Touch<\/a>');\r\n    \r\n    \/\/ initiate the tabs with the #echo--tabs element\r\n    \/\/ $('#echo--tabs').tabs();\r\n    \r\n    \/\/ establish the click to show for the tabs\r\n    $('#echo--tabs a').click(function(e) {\r\n      e.preventDefault();\r\n      $(this).tab('show');\r\n    });\r\n\r\n    \/\/ scrolling functionality for the \"Get in Touch\" button\r\n    $('#js-git-click').click(function(e) {\r\n      e.preventDefault();\r\n      $('html, body').animate({\r\n          scrollTop: $('#get-in-touch').offset().top - 0\r\n      }, 1000);\r\n    });\r\n  });\r\n<\/script>",
+                "placeholder": "<script type=\"text\/javascript\">$(document).ready(function() { ... <\/script>",
+                "maxlength": "",
+                "rows": 16,
+                "new_lines": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "echo-template.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "the_content",
+            "comments"
+        ],
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_582270bb00b6e",
+        "title": "Echo :: Hero Section",
+        "fields": [
+            {
+                "key": "field_58228d0295d68",
+                "label": "Hero Background Image",
+                "name": "echo_lp_hero_background_image",
+                "type": "image",
+                "instructions": "Please select an image asset that will be displayed as the background pattern (repeated horizontally and scaled to contain). Default background color #292829.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "thumbnail",
+                "library": "uploadedTo",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "jpg, png, jpeg"
+            },
+            {
+                "key": "field_582270c3b5ab7",
+                "label": "Hero Heading",
+                "name": "echo_lp_hero_heading",
+                "type": "textarea",
+                "instructions": "This will be the white text that overlays the dark background pattern. Character limit of 70.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Introducing Echo, the future-first approach \r\nto growth planning.",
+                "placeholder": "This will be the white text that overlays the dark background pattern.",
+                "maxlength": 70,
+                "rows": 3,
+                "new_lines": "br"
+            },
+            {
+                "key": "field_58228a3a7c707",
+                "label": "Hero Modal Trigger",
+                "name": "echo_lp_hero_modal_trigger",
+                "type": "image",
+                "instructions": "Please select a PNG image asset, that when clicked, will trigger the video modal window.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "id",
+                "preview_size": "full",
+                "library": "uploadedTo",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "png"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "echo-template.php"
+                }
+            ]
+        ],
+        "menu_order": 1,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_58227386b5ae4",
+        "title": "Echo :: Featured Content",
+        "fields": [
+            {
+                "key": "field_5822739ba2313",
+                "label": "Featured Image",
+                "name": "echo_lp_featured_image",
+                "type": "image",
+                "instructions": "Please provide an image that will be displayed in the left most area (desktop) of the featured content row.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "id",
+                "preview_size": "full",
+                "library": "uploadedTo",
+                "min_width": "",
+                "min_height": 110,
+                "min_size": "",
+                "max_width": "",
+                "max_height": "205px",
+                "max_size": "",
+                "mime_types": "png"
+            },
+            {
+                "key": "field_5822745feca3f",
+                "label": "Short paragraph",
+                "name": "echo_lp_featured_content_paragraph",
+                "type": "text",
+                "instructions": "Please provide the block of text that with be larger in font size. Character limit of 130.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "The challenge facing companies today is not ambition for transformation, but how to catalyze action. Echo is that catalyst.",
+                "prepend": "",
+                "append": "",
+                "maxlength": 130
+            },
+            {
+                "key": "field_5822796d100c0",
+                "label": "Short small text",
+                "name": "echo_lp_featured_content_small",
+                "type": "text",
+                "instructions": "Please provide the block of text that with be smaller in font size. Character limit of 65.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "The future-first approach to growth planning, from:",
+                "prepend": "",
+                "append": "",
+                "maxlength": 65
+            },
+            {
+                "key": "field_582287aecb50c",
+                "label": "Featured Logos",
+                "name": "echo_lp_featured_logos",
+                "type": "image",
+                "instructions": "Please provide a transparent PNG that will be displayed under the small text of the featured content block.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "id",
+                "preview_size": "full",
+                "library": "uploadedTo",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ".png"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "echo-template.php"
+                }
+            ]
+        ],
+        "menu_order": 3,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_58227f7912e3f",
+        "title": "Echo :: Content Row (White Background)",
+        "fields": [
+            {
+                "key": "field_58227f791a893",
+                "label": "Heading",
+                "name": "echo_lp_content_row_a_white_bg_heading",
+                "type": "text",
+                "instructions": "The orange heading text for the content area. Character limit of 65.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "Prepare for the Competitor You Won't See Coming",
+                "prepend": "",
+                "append": "",
+                "maxlength": 65
+            },
+            {
+                "key": "field_58227f791a907",
+                "label": "Supporting paragraph",
+                "name": "echo_lp_content_row_a_white_bg_paragraph",
+                "type": "textarea",
+                "instructions": "The black paragraph for the content area. Character limit of 340.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "In a market rife with disruption, from start-ups upending incum...",
+                "maxlength": 340,
+                "rows": 3,
+                "new_lines": "br"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "echo-template.php"
+                }
+            ]
+        ],
+        "menu_order": 4,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_58228f8183d53",
+        "title": "Echo :: Tech Background Row",
+        "fields": [
+            {
+                "key": "field_58228f9e5e2ef",
+                "label": "Background image",
+                "name": "echo_lp_tech_bg_background_image",
+                "type": "image",
+                "instructions": "Select an image that will be used to separate the white background content blocks. This image will not be repeated and centered both horizontally and vertically.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "thumbnail",
+                "library": "uploadedTo",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "png, jpg, jpeg"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "echo-template.php"
+                }
+            ]
+        ],
+        "menu_order": 5,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_58227be22e1aa",
+        "title": "Echo :: Content Row (White Background)",
+        "fields": [
+            {
+                "key": "field_58227bf763189",
+                "label": "Heading",
+                "name": "echo_lp_content_row_b_white_bg_heading",
+                "type": "text",
+                "instructions": "The orange heading text for the content area. Character limit of 65.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "Catalyze Action Around a Common Enemy",
+                "prepend": "",
+                "append": "",
+                "maxlength": 65
+            },
+            {
+                "key": "field_58227c426318a",
+                "label": "Supporting paragraph",
+                "name": "echo_lp_content_row_b_white_bg_paragraph",
+                "type": "textarea",
+                "instructions": "The black paragraph for the content area. Character limit of 340.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "Echo is a future-first growth strategy that creates a comprehensi...",
+                "maxlength": 340,
+                "rows": 3,
+                "new_lines": "br"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "echo-template.php"
+                }
+            ]
+        ],
+        "menu_order": 6,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_58227e9cdb413",
+        "title": "Echo :: Content Row (Grey Background)",
+        "fields": [
+            {
+                "key": "field_58227e9ce3616",
+                "label": "Heading",
+                "name": "echo_lp_content_row_a_grey_bg_heading",
+                "type": "text",
+                "instructions": "The orange heading text for the content area. Character limit of 65.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "Catalyze Action Around a Common Enemy",
+                "prepend": "",
+                "append": "",
+                "maxlength": 65
+            },
+            {
+                "key": "field_58227e9ce3693",
+                "label": "Supporting paragraph",
+                "name": "echo_lp_content_row_a_grey_bg_paragraph",
+                "type": "textarea",
+                "instructions": "The black paragraph for the content area. Character limit of 340.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "The Echo process defines a competitor that is not shackled to curre...",
+                "maxlength": 340,
+                "rows": 3,
+                "new_lines": "br"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "echo-template.php"
+                }
+            ]
+        ],
+        "menu_order": 7,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5822830e7fcae",
+        "title": "Echo :: Logos Row (Grey Background)",
+        "fields": [
+            {
+                "key": "field_5822830e8a9d0",
+                "label": "Heading",
+                "name": "echo_lp_logos_row_grey_bg_heading",
+                "type": "text",
+                "instructions": "The orange heading text for the content area. Character limit of 65.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "Catalyze Action Around a Common Enemy",
+                "prepend": "",
+                "append": "",
+                "maxlength": 65
+            },
+            {
+                "key": "field_5822830e8aa4f",
+                "label": "Logos Block",
+                "name": "echo_lp_logo_row_grey_bg_logos_block",
+                "type": "wysiwyg",
+                "instructions": "Please paste the logo markup that will be output when the page is loaded.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "echo-template.php"
+                }
+            ]
+        ],
+        "menu_order": 9,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5822857473489",
+        "title": "Echo :: Leads Form (White Background)",
+        "fields": [
+            {
+                "key": "field_582285747b200",
+                "label": "Heading",
+                "name": "echo_lp_leads_form_row_white_bg_heading",
+                "type": "text",
+                "instructions": "The orange heading text for the content area. Character limit of 65.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "Catalyze Action Around a Common Enemy",
+                "prepend": "",
+                "append": "",
+                "maxlength": 65
+            },
+            {
+                "key": "field_582285747b276",
+                "label": "Lead Form Block",
+                "name": "echo_lp_leads_form_row_white_bg_form_block",
+                "type": "textarea",
+                "instructions": "Please paste the form markup that will be output when the page is loaded.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "echo-template.php"
+                }
+            ]
+        ],
+        "menu_order": 10,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5822995f8b4aa",
+        "title": "Echo :: Modal Window",
+        "fields": [
+            {
+                "key": "field_5822996a13b45",
+                "label": "Close button text",
+                "name": "echo_lp_modal_close_button_text",
+                "type": "text",
+                "instructions": "Please provide a word to define the closing of the modal behavior. Character limit is 10. Text is transformed to uppercase.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "Close",
+                "prepend": "",
+                "append": "",
+                "maxlength": 10
+            },
+            {
+                "key": "field_582299d074cbb",
+                "label": "Modal Embed Code",
+                "name": "echo_lp_modal_embed_code",
+                "type": "textarea",
+                "instructions": "Provide the embed code provided from video sharing platforms such as YouTube or Vimeo.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 3,
+                "new_lines": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "echo-template.php"
+                }
+            ]
+        ],
+        "menu_order": 11,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    }
+]
