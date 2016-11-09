@@ -31,12 +31,12 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="container">
-            <div class="row">
-              <div class="col-xs-12 col-sm-3 text-center">
+            <div class="row equal-height">
+              <div class="col-xs-12 col-sm-3 col-sm-offset-1 text-center">
                 <?php $featured_image = wp_get_attachment_image_src(get_field('echo_lp_featured_image'), 'full'); ?>
                 <img src="<?php echo $featured_image[0]; ?>" alt="<?php echo get_the_title(get_field('echo_lp_featured_image')) ?>" />
               </div>
-              <div class="col-xs-12 col-sm-9 echo--featured-content">
+              <div class="col-xs-12 col-sm-7 echo--featured-content">
                 <p><?php the_field('echo_lp_featured_content_paragraph') ?></p>
                 <small><?php the_field('echo_lp_featured_content_small') ?></small>
                 <?php $featured_logo = wp_get_attachment_image_src(get_field('echo_lp_featured_logos'), 'full'); ?>
@@ -53,7 +53,7 @@
         <div class="col-xs-12 col-md-12">
           <div class="container">
             <div class="row">
-              <div class="col-xs-12">
+              <div class="col-xs-12 col-md-10 col-md-offset-1">
                 <section class="echo--content-section">
                   <h1><?php the_field('echo_lp_content_row_a_white_bg_heading') ?></h1>
                   <hr />
@@ -71,9 +71,9 @@
         $tech_pattern_bg = get_field('echo_lp_tech_bg_background_image');
 
         if ( !empty($tech_pattern_bg) ) {
-          echo '<div class="col-xs-12" style="background-image: url(' . $tech_pattern_bg['url'] . ');">';
+          echo '<div class="col-xs-12 echo--tech-background-image" style="background-image: url(' . $tech_pattern_bg['url'] . ');">';
         } else {
-          echo '<div class="col-xs-12 default">';
+          echo '<div class="col-xs-12 echo--tech-background-image default">';
         } 
       ?>
       </div>
@@ -84,7 +84,7 @@
         <div class="col-xs-12 col-md-12">
           <div class="container">
             <div class="row">
-              <div class="col-xs-12">
+              <div class="col-xs-12 col-md-10 col-md-offset-1">
                 <section class="echo--content-section">
                   <h1><?php the_field('echo_lp_content_row_b_white_bg_heading') ?></h1>
                   <hr />
@@ -102,7 +102,7 @@
         <div class="col-xs-12 col-md-12">
           <div class="container">
             <div class="row">
-              <div class="col-xs-12">
+              <div class="col-xs-12 col-md-10 col-md-offset-1">
                 <section class="echo--content-section">
                   <h1><?php the_field('echo_lp_content_row_a_grey_bg_heading') ?></h1>
                   <hr />
@@ -155,7 +155,7 @@
         <div class="col-xs-12 col-md-12">
           <div class="container">
             <div class="row">
-              <div class="col-xs-12">
+              <div class="col-xs-12 col-md-10 col-md-offset-1">
                 <section class="echo--content-section">
                   <h1><?php the_field('echo_lp_logos_row_grey_bg_heading') ?></h1>
                   <hr />
@@ -175,7 +175,7 @@
         <div class="col-xs-12 col-md-12">
           <div class="container">
             <div class="row">
-              <div class="col-xs-12">
+              <div class="col-xs-12 col-md-10 col-md-offset-1">
                 <section class="echo--content-section">
                   <h1><?php the_field('echo_lp_leads_form_row_white_bg_heading') ?></h1>
                   <hr />
@@ -196,4 +196,3 @@
 </main>
 
 <?php get_footer(); ?>
-
