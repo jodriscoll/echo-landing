@@ -3,7 +3,7 @@
   Template Name: Echo Landing Page Template
   */
 
-  get_header(); 
+  get_header();
 ?>
 
   <?php the_field('echo_lp_scripts') ?>
