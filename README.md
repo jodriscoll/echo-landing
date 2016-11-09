@@ -18,5 +18,10 @@ $ git status
 ```bash
 # make sure you have Sass installed (http://sass-lang.com/install)
 $ cd {development_location}/echo-landing/sass/
-$ sass --watch --sourcemap=none  style.scss:style.min.css --style compressed
+$ sass --watch --sourcemap=none echo-lp.scss:echo-lp.min.css --style compressed
 ```
+
+
+### php:
+- *functions.php*: includes any PHP partials required for this template
+- *echo-landing.php*: core template file that should be placed in the root of your active theme
