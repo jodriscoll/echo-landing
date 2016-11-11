@@ -23,5 +23,5 @@ $ sass --watch --sourcemap=none echo-lp.scss:echo-lp.min.css --style compressed
 
 
 ### php:
-- *functions.php*: includes any PHP partials required for this template
-- *echo-landing.php*: core template file that should be placed in the root of your active theme
+- ````/php-partials/functions.php````: includes any PHP partials required for this template
+- ````echo-landing.php````: core template file that should be placed in the root of your active theme
