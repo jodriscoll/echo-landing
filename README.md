@@ -22,6 +22,15 @@ $ sass --watch --sourcemap=none echo-lp.scss:echo-lp.min.css --style compressed
 ```
 
 
+### javascript:
+```bash
+# make sure you have UglifyJS installed (https://www.npmjs.com/package/uglify-js)
+$ cd {development_location}/echo-landing/javascript/
+$ uglifyjs echo-template.js -o echo-template.min.js -c -m
+# translation: sourcefile --output destionationfile --compressed --mangled (https://github.com/mishoo/UglifyJS2)
+```
+
+
 ### php:
 - ````/php-partials/functions.php````: includes any PHP partials required for this template
 - ````echo-landing.php````: core template file that should be placed in the root of your active theme
