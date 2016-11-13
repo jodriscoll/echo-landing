@@ -21,7 +21,6 @@
     ?>
       <div class="row">
         <h1><?php the_field('echo_lp_hero_heading') ?></h1>
-        <?php # <h1><?php the_field('echo--lp-modal_h1')</h1> ?>
         <?php $hero_modal_trigger = wp_get_attachment_image_src(get_field('echo_lp_hero_modal_trigger'), 'full'); ?>
         <img data-toggle="modal" data-target="#basicModal" src="<?php echo $hero_modal_trigger[0]; ?>" alt="<?php echo get_the_title(get_field('echo_lp_hero_modal_trigger')) ?>" class="echo--lp-modal-video" id="echo--lp-modal-video" />
       </div>
