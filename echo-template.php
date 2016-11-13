@@ -32,9 +32,9 @@
         <div class="col-xs-12">
           <div class="container">
             <div class="row equal-height">
-              <div class="col-xs-12 col-sm-3 col-sm-offset-1 text-center">
+              <div class="col-xs-12 col-sm-3 col-sm-offset-1 text-center echo--featured-logo">
                 <?php $featured_image = wp_get_attachment_image_src(get_field('echo_lp_featured_image'), 'full'); ?>
-                <img src="<?php echo $featured_image[0]; ?>" alt="<?php echo get_the_title(get_field('echo_lp_featured_image')) ?>" />
+                <img src="<?php echo $featured_image[0]; ?>" alt="<?php echo get_the_title(get_field('echo_lp_featured_image')) ?>"  alt="Featured Logo" height="200" width="auto" />
               </div>
               <div class="col-xs-12 col-sm-7 echo--featured-content">
                 <p><?php the_field('echo_lp_featured_content_paragraph') ?></p>
@@ -71,9 +71,9 @@
         $tech_pattern_bg = get_field('echo_lp_tech_bg_background_image');
 
         if ( !empty($tech_pattern_bg) ) {
-          echo '<div class="col-xs-12 echo--tech-background-image" style="background-image: url(' . $tech_pattern_bg['url'] . ');">';
+          echo '<div class="row echo--tech-background-image" style="background-image: url(' . $tech_pattern_bg['url'] . ');">';
         } else {
-          echo '<div class="col-xs-12 echo--tech-background-image default">';
+          echo '<div class="row echo--tech-background-image default">';
         } 
       ?>
       </div>
@@ -115,34 +115,34 @@
       </div>
     </div>
     
-    <div class="container-fluid echo--content-block white-bg">
+    <div class="container-fluid echo--content-block echo--tabs-container white-bg">
       <div class="row">
-        <div class="col-xs-12 col-md-12">
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-12">
-                <div class="echo--tabs-block">
-                  <ul class="nav nav-tabs echo--tabs" id="echo--tabs">
-                    <li class="active"><a href="#approach">Approach</a></li>
-                    <li><a href="#capabilities">Capabilities</a></li>
-                    <li><a href="#timeline">Timeline</a></li>
-                  </ul>
-                  <div class="tab-content">
-                    <div class="tab-pane fade in active" id="approach">
-                      <p>Every activity is approached through four key vectors:</p>
-                      <img src="//www.fahrenheit-212.com/wp-content/themes/212F/echo--landing-page/images/tabs--approach-placeholder.png" width="733" height="271" alt="Approach" />
-                    </div>
-                    <div class="tab-pane fade" id="capabilities">
-                      <p>Our unique approach is purpose-built to meet the challenges of driving growth in a market rife with disruption.</p>
-                      <img src="//www.fahrenheit-212.com/wp-content/themes/212F/echo--landing-page/images/tabs--capabilities-placeholder.png" width="731" height="272" alt="Capabilities" />
-                    </div>
-                    <div class="tab-pane fade" id="timeline">
-                      <p>In a 12-week sprint, Echo will free your business from its current constraints to define the products and services, organizational structure, platform technologies, and business model of your fiercest future competitor - and devise a proactive plan of attack.</p>
-                      <p>Knowing that market dynamics evolve, as do opportunities, we will also come together biannually to refresh the vision and realign initiatives.</p>
-                      <img src="//www.fahrenheit-212.com/wp-content/themes/212F/echo--landing-page/images/tabs--timeline-placeholder.png" width="718" height="206" alt="Timeline" />
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="echo--tabs-block">
+
+            <?php if( have_rows( 'echo_lp_tabs_titles' ) ): ?>
+                <ul class="nav nav-tabs echo--tabs" id="echo--tabs">
+              <?php while( have_rows( 'echo_lp_tabs_titles' ) ): the_row(); ?>
+                  <li role="presentation"><a href="#tab-first" role="tab" data-toggle="tab"><?php the_sub_field( 'echo_lp_tabs_titles_title' ); ?></a></li>
+              <?php endwhile; ?>
+                </ul>
+            <?php endif; ?>
+
+            <?php if( have_rows( 'echo_lp_tab_contents' ) ): ?>
+                <div class="tab-content" id="echo--tabs-content">
+              <?php while( have_rows( 'echo_lp_tab_contents' ) ): the_row(); ?>
+                  <div class="tab-pane fade">
+                    <?php the_sub_field( 'echo_lp_tab_contents__introduction_paragraph' ); ?>
+                    <div class="columns row">
+                      <?php the_sub_field( 'echo_lp_tab_contents__custom_content_block' ); ?>
                     </div>
                   </div>
+              <?php endwhile; ?>
                 </div>
+            <?php endif; ?>
+            
               </div>
             </div>
           </div>
@@ -150,7 +150,7 @@
       </div>
     </div>
 
-    <div class="container-fluid echo--content-block grey-bg echo--top-companies">
+    <div class="container-fluid echo--content-block echo--top-companies grey-bg">
       <div class="row">
         <div class="col-xs-12 col-md-12">
           <div class="container">
