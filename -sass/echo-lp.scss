@@ -173,6 +173,13 @@ body.page-template-echo-template {
           width: 50%;
         }
       }
+      // ≥ tablet start
+      @media (min-width: $width_tablet_start) {
+        img {
+          height: 200px;
+          max-height: 200px
+        }
+      }
     }
     .echo--featured-content {
       // ≥ desktop start
