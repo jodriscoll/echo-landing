@@ -17,7 +17,7 @@ $ git status
 ### sass:
 ```bash
 # make sure you have Sass installed (http://sass-lang.com/install)
-$ cd {development_location}/echo-landing/sass/
+$ cd {development_location}/echo-landing/_sass/
 $ sass --watch --sourcemap=none echo-lp.scss:echo-lp.min.css --style compressed
 ```
 
@@ -25,7 +25,7 @@ $ sass --watch --sourcemap=none echo-lp.scss:echo-lp.min.css --style compressed
 ### javascript:
 ```bash
 # make sure you have UglifyJS installed (https://www.npmjs.com/package/uglify-js)
-$ cd {development_location}/echo-landing/javascript/
+$ cd {development_location}/echo-landing/_javascript/
 $ uglifyjs echo-template.js -o echo-template.min.js -c -m
 # translation: sourcefile --output destionationfile --compressed --mangled (https://github.com/mishoo/UglifyJS2)
 ```
