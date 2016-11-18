@@ -16,7 +16,6 @@ $width_large_start: 1200px;
 // =============================================================================
 body.page-template-echo-template {
   // overrides for parent environment or third party generated definitions
-  // ===========================================================================
   margin-top: 60px;                                                             // create enough space for the header bar
   #header {                                                                     
     box-shadow: 0 0 14px -6px black;
@@ -38,15 +37,13 @@ body.page-template-echo-template {
     right: 0;
     margin: 0 auto;
     z-index: 3001;
-    // ≤ mobile end
     @media (max-width: $width_mobile_end) { 
       width: 95%;
-      height: 345px;
+      height: 405px;
     }
-    // ≥ tablet start
     @media (min-width: $width_tablet_start) {
-      width: 560px;
-      height: 345px;
+      height: 405px;
+      width: 720px;
     }
     iframe, object, embed {
       max-width: 100%;
@@ -64,6 +61,8 @@ body.page-template-echo-template {
     }
   }
 
+
+  // ===========================================================================
   // custom definitions specific to the Echo Landing Page template
   // ===========================================================================
   .echo--header-git {                                                           // a.echo--header-git#js-git-click
@@ -77,14 +76,12 @@ body.page-template-echo-template {
     text-align: center;
     top: 25%;
     &:hover, &:focus { text-decoration: none; }
-    // ≤ mobile end
     @media (max-width: $width_mobile_end) {
       font-size: 9pt;
       line-height: 9pt;
       right: 60px;
       width: 100px;
     }
-    // = tablet start
     @media (min-width: $width_tablet_start) {
       font-size: 12pt;
       line-height: 12pt;
@@ -101,7 +98,6 @@ body.page-template-echo-template {
     &.default {
       background: url('/wp-content/uploads/2016/11/hero_background-pattern.png') no-repeat top center transparent;
     }
-    // ≥ desktop start
     @media (min-width: $width_desktop_start) {
       background-repeat: repeat-x;
     }
@@ -111,24 +107,20 @@ body.page-template-echo-template {
       font-weight: 300;
       margin: 0 auto;
       text-align: center;
-      // ≤ mobile end
       @media (max-width: $width_mobile_end) {
         font-size: 24pt;
         line-height: 31pt;
         width: 90%;
       }
-      // = tablet only
       @media (min-width: $width_tablet_start) and (max-width: $width_tablet_end) {
         width: 75%;
       }
-      // ≥ tablet start
       @media (min-width: $width_tablet_start) {
         font-size: 37pt;
         line-height: 44pt;
       }
-      // ≥ desktop start
       @media (min-width: $width_desktop_start) {
-        width: 45%;
+        width: 50%;
       }
     }
     .echo--lp-modal-video {                                                     // img.echo--lp-modal-video
@@ -138,15 +130,12 @@ body.page-template-echo-template {
       margin: 0 auto;
       position: absolute;
       right: 0;
-      // ≤ mobile end
       @media (max-width: $width_mobile_end) {
         bottom: 63px;
       }
-      // ≥ tablet start
       @media (min-width: $width_tablet_start) {
         bottom: 80px;
       }
-      // ≥ desktop start
       @media (min-width: $width_desktop_start) {
         bottom: 126px;
       }
@@ -154,18 +143,15 @@ body.page-template-echo-template {
   }
   .echo--featured {                                                             // div.container-fluid.echo--featured
     background-color: #F6F6F6;
-    // ≤ mobile end
     @media (max-width: $width_mobile_end) {
       padding-bottom: 35px;
       padding-top: 35px;
     }
-    // ≥ tablet start
     @media (min-width: $width_tablet_start) {
       padding-bottom: 70px;
       padding-top: 70px;
     }
     .echo--featured-logo {                                                      // img.echo--featured-logo
-      // ≤ mobile end
       @media (max-width: $width_mobile_end) {
         img {
           height: 50%;
@@ -173,7 +159,6 @@ body.page-template-echo-template {
           width: 50%;
         }
       }
-      // ≥ tablet start
       @media (min-width: $width_tablet_start) {
         img {
           height: 200px;
@@ -182,7 +167,6 @@ body.page-template-echo-template {
       }
     }
     .echo--featured-content {
-      // ≥ desktop start
       @media (min-width: $width_desktop_start) {
         padding-left: 50px;
       }
@@ -191,12 +175,10 @@ body.page-template-echo-template {
         font-family: Helvetica, Arial, sans-serif;
         font-weight: 300;
         margin-bottom: 25px;
-        // ≤ mobile end
         @media (max-width: $width_mobile_end) {
           font-size: 14pt;
           line-height: 16pt;
         }
-        // ≥ tablet start
         @media (min-width: $width_tablet_start) {
           font-size: 25pt;
           line-height: 27pt;
@@ -208,12 +190,10 @@ body.page-template-echo-template {
         font-family: Helvetica, Arial, sans-serif;
         font-weight: 300;
         margin-bottom: 15px;
-        // ≤ mobile end
         @media (max-width: $width_mobile_end) {
           font-size: 11pt;
           line-height: 17pt;
         }
-        // ≥ tablet start
         @media (min-width: $width_tablet_start) {
           font-size: 13pt;
           line-height: 19pt;
@@ -224,14 +204,7 @@ body.page-template-echo-template {
   .echo--content-block {                                                        // div.container-fluid.echo--content-block
     padding-bottom: 80px;
     padding-top: 80px;
-    // ≤ mobile end
-    @media (max-width: $width_mobile_end) { }
-    // ≥ tablet start
-    @media (min-width: $width_tablet_start) { }
-    // ≥ desktop start
-    @media (min-width: $width_desktop_start) { }
     .echo--content-section {
-      // section
       text-align: center;
       h1 {
         color: #F26B21;
@@ -242,12 +215,10 @@ body.page-template-echo-template {
         padding-top: 0;
         padding-bottom: 0;
         text-align: center;
-        // ≤ mobile end
         @media (max-width: $width_mobile_end) {
           font-size: 22pt;
           line-height: 28pt;
         }
-        // ≥ tablet start
         @media (min-width: $width_tablet_start) {
           font-size: 28pt;
           line-height: 34pt;
@@ -269,12 +240,10 @@ body.page-template-echo-template {
         padding-top: 0;
         padding-bottom: 0;
         text-align: center;
-        // ≤ mobile end
         @media (max-width: $width_mobile_end) {
           font-size: 16pt;
           line-height: 22pt;
         }
-        // ≥ tablet start
         @media (min-width: $width_tablet_start) {
           font-size: 22pt;
           line-height: 28pt;
@@ -297,15 +266,12 @@ body.page-template-echo-template {
         margin: 0 auto;
         margin-top: 40px;
         width: 50%;
-        // ≤ mobile end
         @media (max-width: $width_mobile_end) { 
           width: 100%;
         }
-        // tablet only
         @media (min-width: $width_tablet_start) and (max-width: $width_tablet_end) {
           width: 70%;
         }
-        // ≥ desktop start
         @media (min-width: $width_desktop_start) {
           width: 50%;
         }
@@ -317,11 +283,9 @@ body.page-template-echo-template {
           font-weight: 300;
           line-height: 12pt;
           text-align: left;
-          // ≤ mobile end
           @media (max-width: $width_mobile_end) { 
             width: 100%;
           }
-          // ≥ tablet start
           @media (min-width: $width_tablet_start) {
             width: 30%;
           }
@@ -335,11 +299,9 @@ body.page-template-echo-template {
           height: auto;
           margin-bottom: 16px;
           padding: 10px 16px;
-          // ≤ mobile end
           @media (max-width: $width_mobile_end) { 
             width: 100%;
           }
-          // ≥ tablet start
           @media (min-width: $width_tablet_start) {
             width: 60%;
           }
@@ -361,30 +323,24 @@ body.page-template-echo-template {
     .echo--tabs-block {
       margin: 0 auto;
       margin-bottom: 80px;
-      // ≤ tablet end
       @media (max-width: $width_tablet_end) {
         width: 100%;
       }
-      // ≥ desktop start
       @media (min-width: $width_desktop_start) {
         width: 770px;
       }
       .echo--tabs {
         border-bottom: 0;
         li {
-          // ≤ mobile end
           @media (max-width: $width_mobile_end) {
             width: 100%;
           }
-          // tablet only
           @media (min-width: $width_tablet_start) and (max-width: $width_tablet_end) {
             width: 30%;
           }
-          // ≥ tablet start
           @media (min-width: $width_tablet_start) {
             margin-right: 16px;
           }
-          // ≥ desktop start
           @media (min-width: $width_desktop_start) {
             width: 245px;
           }
@@ -399,12 +355,10 @@ body.page-template-echo-template {
             text-align: center;
             text-transform: uppercase;
             &:hover, &:focus { color: #6D6E71; }
-            // ≤ mobile end
             @media (max-width: $width_mobile_end) {
               font-size: 13pt;
               line-height: 18pt;
             }
-            // = tablet only
             @media (min-width: $width_tablet_start) and (max-width: $width_tablet_end) {
               font-size: 15pt;
               line-height: 20pt;
@@ -423,13 +377,22 @@ body.page-template-echo-template {
       }
       .tab-content {
         background-color: #F6F8F7;
+        @media (min-width: $width_tablet_start) {
+          height: 489px;
+          min-height: 489px;
+          padding: 35px;
+        }
         .tab-pane {
+          @media (min-width: $width_tablet_start) {
+            background-color: transparent;
+            height: 100%;
+            padding: 0;
+          }
           > p {
             color: rgba(0, 0, 0, .7);
             font-family: Georgia, Times, "Times New Roman", serif;
             padding-bottom: 0;
             padding-top: 0;
-            // ≤ mobile end
             @media (max-width: $width_mobile_end) {
               font-size: 13pt;
               line-height: 22pt;
@@ -437,17 +400,15 @@ body.page-template-echo-template {
                 margin-bottom: 40px;
               }
             }
-            // ≥ tablet start
             @media (min-width: $width_tablet_start) {
               font-size: 15pt;
-              line-height: 24pt;
+              line-height: 19pt;
               &:last-of-type {
-                margin-bottom: 77px;
+                margin-bottom: 30px;
               }
             }
           }
           .columns {
-            // ≤ mobile end
             @media (max-width: $width_mobile_end) {
               .col-xs-12, .col-20p {
                 margin-bottom: 24px;
@@ -455,11 +416,15 @@ body.page-template-echo-template {
               }
               div:last-of-type { margin-bottom: 0; }
             }
+            @media (min-width: $width_tablet_start) {
+              height: 90%;
+            }
             > div {
-              // ≥ tablet start
               @media (min-width: $width_tablet_start) {
                 border-right: 1px dashed #6D6E70;
-                min-height: 310px
+                // min-height: 310px;
+                min-height: 100%;
+                position: relative;
               }
               &:last-of-type {
                 border-right: none;
@@ -475,7 +440,7 @@ body.page-template-echo-template {
               display: block;
               font-family: Helvetica, Arial, sans-serif;
               font-size: 10pt;
-              margin-bottom: 20px;
+              margin-bottom: 10px;
             }
             span {
               color: #F26D23;
@@ -486,15 +451,13 @@ body.page-template-echo-template {
               padding-bottom: 0;
               padding-top: 0;
               text-transform: uppercase;
-              // ≤ mobile end
               @media (max-width: $width_mobile_end) {
                 font-size: 10pt;
                 line-height: 14pt;
               }
-              // ≥ tablet start
               @media (min-width: $width_tablet_start) {
                 font-size: 10pt;
-                line-height: 14pt;
+                line-height: 12pt;
               }
             }
             hr {
@@ -508,22 +471,19 @@ body.page-template-echo-template {
               margin: 0;
               padding-bottom: 0;
               padding-top: 0;
-              // ≤ mobile end
               @media (max-width: $width_mobile_end) {
                 font-size: 9pt;
                 line-height: 14pt;
               }
-              // ≥ tablet start
               @media (min-width: $width_tablet_start) {
                 font-size: 9pt;
-                line-height: 14pt;
+                line-height: 11.5pt;
               }
             }
             .col-20p {
               float: left;
               padding-left: 15px;
               padding-right: 15px;
-              // ≥ tablet start
               @media (min-width: $width_tablet_start) {
                 width: 20%;
               }
@@ -532,9 +492,8 @@ body.page-template-echo-template {
               border-top: 4px solid #6D6E70;
               background-color: white;
               padding: 15px;
-              // ≥ desktop start
               @media (min-width: $width_desktop_start) {
-                min-height: 230px;
+                min-height: 200px;
               }
               // shared for all timeline defintions
               [class*='tabs--'] {
@@ -543,10 +502,10 @@ body.page-template-echo-template {
                   display: block;
                   font-family: 'Helvetica Neue', Arial, sans-serif;
                   font-size: 10pt;
-                  font-weight: normal;
+                  font-weight: bold;
                   letter-spacing: 1.25px;
                   line-height: 18pt;
-                  margin-bottom: 16px;
+                  margin-bottom: 10px;
                   padding-bottom: 0;
                   position: relative;
                   width: 100%;
@@ -570,7 +529,7 @@ body.page-template-echo-template {
                 }
               }
               .tabs--vision {
-                margin-bottom: 24px;
+                margin-bottom: 15px;
                 span {
                   border-bottom-color: #FECB07;
                   color: #FECB07;
@@ -604,6 +563,30 @@ body.page-template-echo-template {
                   &:after {
                     background: url('/wp-content/uploads/2016/11/tabs-timeline-playbook.png') no-repeat top right transparent;
                   }
+                }
+              }
+            }
+          }
+          // approach and capabilities tabs override
+          &#tab-first, &#tab-second {
+            .columns {
+              > div {
+                p {
+                  @media (min-width: $width_tablet_start) {
+                    padding-right: 15px;                                        // match parent container (result of absolute positioning)
+                    position: absolute;
+                    top: 172px;                                                 // position all <p> elements at the same point
+                  }
+                }
+              }
+            }
+          }
+          // capabilities tabs override
+          &#tab-second {
+            .columns {
+              .col-20p {
+                @media (min-width: $width_tablet_start) {
+                  margin-top: 1px;
                 }
               }
             }
@@ -643,11 +626,9 @@ body.page-template-echo-template {
   }
   .echo--tech-background {                                                      // div.container-fluid.echo--tech-background
     background-color: #F6F6F6;
-    // ≤ mobile end
     @media (max-width: $width_mobile_end) {
       height: 164px;
     }
-    // ≥ tablet start
     @media (min-width: $width_tablet_start) {
       height: 328px;
       max-height: 328px;
@@ -660,7 +641,6 @@ body.page-template-echo-template {
       &.default {
         background: url('/wp-content/uploads/2016/11/hero_background-pattern.png') no-repeat top center transparent;
       }
-      // ≤ mobile end
       @media (max-width: $width_mobile_end) {
         background-size: cover;
       }
