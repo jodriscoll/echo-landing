@@ -35,4 +35,22 @@ $(document).ready(function() {
     e.preventDefault();
     $(this).tab('show');
   });
+
+  // create the form submission behavior for an on-page thank you confirmation
+  $( '#lead_gen_form' ).submit(function(e) {
+    // prevent default submission
+    e.preventDefault();
+    $.post( 'echo-landing--form-success.php', $(this).serialize() )
+    // success data submission through the above .php file
+    .done(function(data) {
+      $( '#echo-landing--form-success' ).fadeOut( 'slow', function() {
+        $( '#echo-landing--form-success' ).fadeIn( 'slow').html(data);
+        console.log( 'Ajax: SUCCESS' );
+      });
+    })
+    // failure to submit date through the above .php file
+    .fail(function() {
+      console.log( 'Ajax: FAILED' );
+    });
+  });
 });
