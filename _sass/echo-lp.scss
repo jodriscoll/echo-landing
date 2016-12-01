@@ -321,6 +321,16 @@ body.page-template-echo-template {
       }
       .echo-landing--form-success {
         display: none;
+        span {
+          color: rgba(0,0,0,0.5);
+          display: block;
+          font-family: Helvetica, Arial, sans-serif;
+          font-size: 19pt;
+          margin: 0;
+          margin: 0 auto;
+          margin-top: 40px;
+          text-align: center;
+        }
       }
     }
     .echo--tabs-block {
@@ -580,6 +590,11 @@ body.page-template-echo-template {
                     position: absolute;
                     top: 172px;                                                 // position all <p> elements at the same point
                   }
+                }
+              }
+              .col-sm-3 {
+                @media (min-width: $width_tablet_start) {
+                  margin-top: 30px;
                 }
               }
             }

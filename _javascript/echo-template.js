@@ -40,17 +40,21 @@ $(document).ready(function() {
   $( '#lead_gen_form' ).submit(function(e) {
     // prevent default submission
     e.preventDefault();
-    $.post( 'echo-landing--form-success.php', $(this).serialize() )
+    // console.log('Stopped the 301!');
+
+    $.post( 'http://www.fahrenheit-212.com//echo-landing--form-success.php', $(this).serialize() )
     // success data submission through the above .php file
     .done(function(data) {
-      $( '#echo-landing--form-success' ).fadeOut( 'slow', function() {
-        $( '#echo-landing--form-success' ).fadeIn( 'slow').html(data);
-        console.log( 'Ajax: SUCCESS' );
+      // console.log('Done! Ready to fade-in the confirmation message.');
+
+      $( '.echo-landing--form' ).fadeOut( 'slow', function() {
+        $( '.echo-landing--form-success' ).fadeIn( 'slow');
+        // console.log( 'Ajax: SUCCESS' );
       });
     })
-    // failure to submit date through the above .php file
+    // failure to submit data through the above post to the .php file
     .fail(function() {
-      console.log( 'Ajax: FAILED' );
+      // console.log( 'Ajax: FAILED' );
     });
   });
 });
