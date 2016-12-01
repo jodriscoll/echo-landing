@@ -176,13 +176,13 @@
             <div class="row">
               <div class="col-xs-12 col-md-10 col-md-offset-1">
                 <section class="echo--content-section">
+                  <h1><?php the_field('echo_lp_leads_form_row_white_bg_heading') ?></h1>
+                  <hr />
                   <div class="echo-landing--form">
-                    <h1><?php the_field('echo_lp_leads_form_row_white_bg_heading') ?></h1>
-                    <hr />
                     <?php the_field('echo_lp_leads_form_row_white_bg_form_block') ?>
                   </div>
                   <div class="echo-landing--form-success">
-                    <h1><?php the_field('echo_lp_leads_form_submission_message') ?></h1>
+                    <span><?php the_field('echo_lp_leads_form_submission_message') ?></span>
                   </div>
                 </section>
               </div>

@@ -10,14 +10,9 @@
 
     ?>
     
+    <h1>Form submitted successfully!</h1>
+
     <table class="table table-striped" border="0">
-      <tr>
-        <td colspan="2">
-         <div class="alert alert-info">
-          <strong>Success</strong>, Form Submitted Successfully...
-         </div>
-        </td>
-      </tr>
       <tr>
         <td>First Name</td>
         <td><?php echo $first_name ?></td>
